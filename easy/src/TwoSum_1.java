@@ -3,7 +3,7 @@ import java.util.Map;
 
 // problem link: https://leetcode.com/problems/two-sum/
 
-public class TwoNum_1 {
+public class TwoSum_1 {
 
     public static void main(String[] args) {
         int[] nums = new int[]{3, 2, 3};
