@@ -6,7 +6,7 @@ public class Solution {
             return n;
         }
         
-        Integer value = memo.get(n);
+        var value = memo.get(n);
         
         if (value == null) {
             value = fib(n - 1) + fib(n - 2);
