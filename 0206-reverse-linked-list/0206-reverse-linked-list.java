@@ -1,3 +1,20 @@
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode previous = null;
+        ListNode current = head;
+        ListNode forward = null;
+        
+        while (current != null) {
+            forward = current.next;
+            current.next = previous;
+            previous = current;
+            current = forward;
+        }
+        
+        return previous;
+    }
+}
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,19 +25,3 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
-    public ListNode reverseList(ListNode head) {
-        ListNode prev = null;
-        ListNode curr = head;
-        ListNode forw = null;
-        
-        while (curr != null) {
-            forw = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = forw;
-        }
-        
-        return prev;
-    }
-}
